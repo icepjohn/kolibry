@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LA KOLIBRY - Galerie</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" id="logo">
+            <img src="assets/images/profile-kolibri-original.png">
+        </a>
+        <!-- Logo -->
+        <div class="overlay">
+            
+            <a id="newsletter">
+                <form class="newsletter" action="newsletter.php" method="post">
+                <input type="email" name="email" id="email" placeholder="newsletter">
+                <button type="submit">S'inscrire</button>
+                </form>
+            </a>
+        
+        <h1 class="animated-title">Galeries</h1>
+            <nav>
+                <ul class="nav">
+                    <li><a href="bio.html">Biographie</a></li>
+                    <li><a href="events.html">Événements</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+    <section class="hero">
+        <h2 class="glitch">La Kolibry - Easter édition 2023/04/09  </h2>
+    </section>
+    <section class="gallery3" id="gallery3" changeImage>
+        <!-- Les images seront ajoutées dynamiquement -->
+    </section>
+    <section class="hero">
+        <h2 class="glitch">Garden Kolibry O'GREEN</h2>
+    </section>
+    <section class="gallery2" id="gallery2">
+        <!-- Les images seront ajoutées dynamiquement -->
+    </section>
+    <section class="hero">
+        <h2 class="glitch">La Kolibry - KICK OFF 09/04/2022</h2>
+    </section>
+    <section class="gallery" id="gallery" changeImage>
+        <!-- Les images seront ajoutées dynamiquement -->
+    </section>
+    </main>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <span class="prev" onclick="changeImage(-1, event)">&#10094;</span>
+        <img id="lightbox-img" class="lightbox-img">
+        <span class="next" onclick="changeImage(1, event)">&#10095;</span>
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

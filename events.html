@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LA KOLIBRY - Événements</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" id="logo">
+            <img src="assets/images/profile-kolibri-original.png">
+        </a>
+        <!-- Logo -->
+        <div class="overlay">
+            
+            <a id="newsletter">
+                <form class="newsletter" action="newsletter.php" method="post">
+                <input type="email" name="email" id="email" placeholder="newsletter">
+                <button type="submit">S'inscrire</button>
+                </form>
+            </a>
+
+            <h1 class="animated-title">Événements</h1>
+            <nav>
+                <ul class="nav">
+                    <li><a href="bio.html">Biographie</a></li>
+                    <li><a href="galerie.html">Galeries</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>    
+    </header>
+
+    <section class="events-list">
+        
+        <div>
+        <h2 class="glitch">Nos futures events</p>
+        </div>
+
+        <!-- Cartes d'événements new -->
+            <div class="events-container">
+                <div class="event-card" onclick="openEvent(this), openEventModal('Kolibry Easter Edition au QG 20/04/2025', 'https://exemple.com')" 
+                    data-title="Kolibry Easter Edition au QG 20/04/2025" 
+                    data-img="assets/images/event20250420.jpg" 
+                    data-description="Un festival incroyable de musique électronique." 
+                    data-link="https://festival-techno.com">
+                    <img src="assets/images/event20250420.jpg" alt="Kolibry Easter Edition au QG 20/04/2025">
+                    <h3>Kolibry Easter Edition au QG 20/04/2025</h3>
+                </div>
+            
+                <div class="event-card" onclick="openEvent(this), openEventModal('Kolibry AMOR AMOR Edition 15/02/2025','https://exemple.com')" 
+                data-title="Kolibry AMOR AMOR Edition 15/02/2025" 
+                    data-img="assets/images/event20250215.jpg" 
+                    data-description="Une soirée électro intense en club." 
+                    data-link="https://soiree-electro.com">
+                    <img src="assets/images/event20250215.jpg" alt="Kolibry AMOR AMOR Edition 15/02/2025">
+                    <h3>Kolibry AMOR AMOR Edition 15/02/2025</h3>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h2 class="glitch">Nos anciens events</p>
+        </div>
+
+        <!-- Cartes d'événements old -->
+        <div class="events-container">
+            <div class="event-card" onclick="openEvent(this), openEventModal('Garden Kolibry O\'GREEN')" 
+                data-title="Garden Kolibry O'GREEN" 
+                data-img="assets/images/event20220611.jpg" 
+                data-description="Un festival incroyable de musique électronique." 
+                data-link="https://festival-techno.com">
+                <img src="assets/images/event20220611.jpg" alt="Garden Kolibry O'GREEN">
+                <h3>Garden Kolibry O'GREEN 06/11/2022 </h3>
+            </div>
+
+            <div class="event-card" onclick="openEvent(this), openEventModal('Garden Kolibry O\'GREEN')" 
+                data-title="Garden Kolibry O'GREEN" 
+                data-img="assets/images/event20220611.jpg" 
+                data-description="Un festival incroyable de musique électronique." 
+                data-link="https://festival-techno.com">
+                <img src="assets/images/event20220611.jpg" alt="Garden Kolibry O'GREEN">
+                <h3>Garden Kolibry O'GREEN 06/11/2022 </h3>
+            </div>
+
+            <div class="event-card" onclick="openEvent(this), openEventModal('Garden Kolibry O\'GREEN')" 
+                data-title="Garden Kolibry O'GREEN" 
+                data-img="assets/images/event20220611.jpg" 
+                data-description="Un festival incroyable de musique électronique." 
+                data-link="https://festival-techno.com">
+                <img src="assets/images/event20220611.jpg" alt="Garden Kolibry O'GREEN">
+                <h3>Garden Kolibry O'GREEN 06/11/2022 </h3>
+            </div>
+
+            <div class="event-card" onclick="openEvent(this), openEventModal('Garden Kolibry O\'GREEN')" 
+                data-title="Garden Kolibry O'GREEN" 
+                data-img="assets/images/event20220611.jpg" 
+                data-description="Un festival incroyable de musique électronique." 
+                data-link="https://festival-techno.com">
+                <img src="assets/images/event20220611.jpg" alt="Garden Kolibry O'GREEN">
+                <h3>Garden Kolibry O'GREEN 06/11/2022 </h3>
+            </div>
+
+            <div class="event-card" onclick="openEvent(this), openEventModal('Garden Kolibry O\'GREEN')" 
+                data-title="Garden Kolibry O'GREEN" 
+                data-img="assets/images/event20220611.jpg" 
+                data-description="Un festival incroyable de musique électronique." 
+                data-link="https://festival-techno.com">
+                <img src="assets/images/event20220611.jpg" alt="Garden Kolibry O'GREEN">
+                <h3>Garden Kolibry O'GREEN 06/11/2022 </h3>
+            </div>
+        
+            <div class="event-card" onclick="openEvent(this), openEventModal('Kolibry KICK OFF 09/04/2022')" 
+                data-title="Kolibry KICK OFF 09/04/2022" 
+                data-img="assets/images/event20220409.jpeg" 
+                data-description="Une soirée électro intense en club." 
+                data-link="https://soiree-electro.com">
+                <img src="assets/images/event20220409.jpeg" alt="Kolibry KICK OFF 09/04/2022">
+                <h3>Kolibry KICK OFF 09/04/2022</h3>
+            </div>
+        </div>
+    </div>
+        
+        <!-- Fenêtre modale pour afficher les détails -->
+        <div id="eventModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeEvent()">&times;</span>
+                <h2 id="eventTitle"></h2>
+                <img id="eventImg" src="" alt="Visuel de l'événement">
+                <p id="eventDescription"></p>
+                <a id="eventLink" class="btn-lien disabled" href="#" target="_blank">Places</a>
+            </div>
+        </div>
+        
+    </section>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

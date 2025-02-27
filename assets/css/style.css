@@ -1,0 +1,362 @@
+/* Importer une police futuriste */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #f5f5f5; /* Fond clair */
+    color: #33485D;
+    margin: 0;
+    padding: 0;
+}
+main {
+    padding-top: 160px;
+    font-family: "Jaapokki", sans-serif; 
+}
+
+/* En-tête */
+header {
+    background: url("../images/COUV FACEBOOK KOLIBRY 2025 EASTER.jpg") no-repeat center center;
+    background-size: cover; /* Couvre tout le header */
+    background-attachment: fixed; /* Active l'effet de parallaxe */
+    background-position: center center; /* Centre l’image */
+    height: 100vh; /* Hauteur du header (ajuste selon besoin) */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    font-family: "Jaapokki", sans-serif;
+    font-size: 2em;
+}
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+    z-index: -1;
+}
+
+header h1 {
+    text-transform: uppercase;
+    color:#ffffff; /* Fond semi-transparent */
+    text-shadow:0 0 10px #00ffff;
+}
+/* Bloc gris header */
+.overlay {
+    position: fixed; /* Fixe le bloc en haut de la page */
+    top: 0;
+    left: 0;
+    width: 100%; /* Prend toute la largeur */
+    height: 30vh; /* Prend la moitié de la hauteur de l’écran */
+    background: rgba(128, 128, 128, 0.6); /* Gris avec 20% d'opacité */
+    z-index: 0; /* S’assure qu’il passe au-dessus du fond */
+}
+#newsletter {
+    position: absolute;
+    right: 20px; /* Le met bien à gauche */
+    top: 55%;
+    transform: translateY(-50%);
+}
+hr {
+    width: 40%;
+    color: black;
+}
+
+#logo {
+    position: absolute; /* Positionne le logo indépendamment */
+    left: 20px; /* Le met bien à gauche */
+    top: 18%;
+    transform: translateY(-50%); /* Centre verticalement */
+    z-index: 1; /* S’assure qu’il passe au-dessus du fond */
+}
+
+#logo img {
+    width: 80px; /* Ajuste la taille */
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Effet au survol (léger zoom + lumière bleue) */
+#logo img:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px #00ffff);
+}
+.social ul {
+   display: flex;
+   justify-content: center;
+   gap: 50px;
+}
+.social img {
+    width: 200px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navigation */
+.nav {
+    position: fixed;
+    top: 150px;
+    width: 100%;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fafafa;
+    font-size: 1.2em;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #33485D;
+    text-shadow: 0 0 15px #e2e8ed;
+}
+
+/* Titres avec effet lumineux */
+h1, h2 {
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px #33485D;
+}
+
+/* Sections */
+section {
+    padding: 50px;
+    text-align: center;
+}
+
+/* Boutons futuristes */
+.btn {
+    display: inline-block;
+    background: transparent;
+    border: 2px solid cyan;
+    color: #33485D;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+}
+
+.btn:hover {
+    background: #33485D;
+    color: black;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 1);
+}
+
+/* Galerie d'images */
+.gallery, .gallery2, .gallery3{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery img, .gallery2 img , .gallery3 img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery img:hover, .gallery2 img:hover, .gallery3 img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+}
+/* Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-img {
+    max-width: 90%;
+    max-height: 90%;
+    box-shadow: 0 0 20px cyan;
+    animation: fadeIn 0.3s ease-in-out;
+}
+/* Curseur pointer pour l'image */
+.lightbox-img {
+    cursor: pointer;
+}
+
+/* Bouton de fermeture */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Animation d'apparition */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+/* Style des flèches */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+.prev:hover, .next:hover {
+    background: rgba(0, 255, 255, 0.8);
+}
+/* Style des cartes événements */
+.events-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.event-card {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 250px;
+}
+
+.event-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.event-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.8);
+}
+
+
+/* Modale */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 50%;
+    max-width: 600px;
+    color: white;
+    position: relative;
+}
+
+/* Ajout d'un style responsive pour l'image en grand */
+.modal-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+/* Style du bouton de fermeture */
+
+.btn-lien {
+    background: #00ffff; /* Bleu néon */
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s;
+    text-align: center;
+    font-weight: bold;
+}
+
+.btn-lien:hover {
+    background: #0099cc;
+}
+
+/* Désactiver le bouton */
+.btn-lien.disabled {
+    background: gray;
+    color: #666;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.close {
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    color: white;
+}
+
+/* Style du lien */
+#eventLink {
+    display: inline-block;
+    background: #00ffff;
+    color: black;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+#eventLink:hover {
+    background: #008b8b;
+}
