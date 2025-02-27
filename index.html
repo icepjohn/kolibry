@@ -9,24 +9,22 @@
 </head>
 <body>
     <header>
-        <!-- Logo -->
         <div class="overlay">
-            <a id="newsletter">
-                <a href="index.html" id="logo" >
-                    <img src="assets/images/profile-kolibri-original.png">
+            <div class="header-top">
+                <a href="index.html" id="logo">
+                    <img src="assets/images/profile-kolibri-original.png" alt="Logo Kolibry">
                 </a>
-                <form id="newsletter" class="newsletter" action="newsletter.php" method="post">
-                <input type="email" name="email" id="email" placeholder="newsletter">
-                <button type="submit">S'inscrire</button>
+                <form class="newsletter" action="newsletter.php" method="post">
+                    <input type="email" name="email" id="email" placeholder="Newsletter" required>
+                    <button type="submit">S'inscrire</button>
                 </form>
-            </a>
-            <!-- Navigation -->
+            </div>
             <h1 class="animated-title">LA KOLIBRY</h1>
             <nav>
                 <button class="menu-toggle" onclick="toggleMenu()">☰</button>
                 <ul class="nav-links">
                     <li><a href="bio.html">Biographie</a></li>
-                    <li><a href="galerie.html">Galeries</a></li>
+                    <li><a href="galerie.html">Galerie</a></li>
                     <li><a href="events.html">Événements</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -35,7 +33,7 @@
     </header>
     <main>
         <section class="hero">
-            <h2 class="glitch">L'association La KOLIBRY - Evènementiel & musique</h2>
+            <h2 class="glitch">L'association La KOLIBRY - Événementiel & musique</h2>
         </section>
     </main>
     <script src="assets/js/script.js"></script>

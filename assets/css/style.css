@@ -36,7 +36,16 @@ header::before {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
     z-index: -1;
 }
-
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px 20px;
+    position: relative; /* Important pour le positionnement des éléments enfants */
+}
 header h1 {
     text-transform: uppercase;
     color:#ffffff; /* Fond semi-transparent */
@@ -52,12 +61,16 @@ header h1 {
     background: rgba(128, 128, 128, 0.6); /* Gris avec 20% d'opacité */
     z-index: 0; /* S’assure qu’il passe au-dessus du fond */
 }
-#newsletter {
+.newsletter {
+    display: flex;
+    align-items: center;
+    padding: 8px;
     position: absolute;
-    right: 20px; /* Le met bien à gauche */
-    top: 55%;
+    right: 20px;
+    top: 550%;
     transform: translateY(-50%);
 }
+
 hr {
     width: 40%;
     color: black;
@@ -66,15 +79,13 @@ hr {
 #logo {
     position: absolute; /* Positionne le logo indépendamment */
     left: 20px; /* Le met bien à gauche */
-    top: 55%;
+    top: 557%;
     transform: translateY(-50%); /* Centre verticalement */
     z-index: 1; /* S’assure qu’il passe au-dessus du fond */
 }
 
 #logo img {
     width: 80px; /* Ajuste la taille */
-    height: auto;
-    transition: transform 0.3s ease-in-out;
 }
 
 /* Effet au survol (léger zoom + lumière bleue) */
@@ -379,6 +390,14 @@ section {
 
 /* 📱 Responsive pour mobiles */
 @media (max-width: 768px) {
+    .newsletter {
+        display: flex;
+    align-items: center;
+    padding: 0px;
+    position: absolute;
+    right: 49px;
+    top: 594%;/* Caché par défaut */
+    }
     .menu-toggle {
         display: block;
     }
@@ -402,6 +421,7 @@ section {
     .nav-links li {
         padding: 15px 0;
     }
+    
     #logo img{
         width: 30px;
         position: fixed;

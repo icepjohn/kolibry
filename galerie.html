@@ -10,16 +10,15 @@
 <body>
     <header>
         <div class="overlay">
-            <a id="newsletter">
+            <div class="header-top">
                 <a href="index.html" id="logo">
-                    <img src="assets/images/profile-kolibri-original.png">
+                    <img src="assets/images/profile-kolibri-original.png" alt="Logo Kolibry">
                 </a>
-                <form id="newsletter" class="newsletter" action="newsletter.php" method="post">
-                <input type="email" name="email" id="email" placeholder="newsletter">
-                <button type="submit">S'inscrire</button>
+                <form class="newsletter" action="newsletter.php" method="post">
+                    <input type="email" name="email" id="email" placeholder="Newsletter" required>
+                    <button type="submit">S'inscrire</button>
                 </form>
-            </a>
-        
+            </div>
         <h1 class="animated-title">Galeries</h1>
         <nav>
             <button class="menu-toggle" onclick="toggleMenu()">☰</button>
