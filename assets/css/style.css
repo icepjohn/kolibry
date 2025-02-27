@@ -9,10 +9,8 @@ body {
     padding: 0;
 }
 main {
-    padding-top: 160px;
     font-family: "Jaapokki", sans-serif; 
 }
-
 /* En-tête */
 header {
     background: url("../images/COUV FACEBOOK KOLIBRY 2025 EASTER.jpg") no-repeat center center;
@@ -26,7 +24,7 @@ header {
     color: white;
     position: relative;
     font-family: "Jaapokki", sans-serif;
-    font-size: 2em;
+    font-size: 1,3em;
 }
 header::before {
     content: "";
@@ -102,10 +100,17 @@ hr {
     align-items: center;
 }
 
+.content {
+    max-width: 80%;
+    margin: 20px auto;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    line-height: 1.6;
+}
+
 /* Navigation */
 .nav {
     position: fixed;
-    top: 150px;
+    top: 100px;
     width: 100%;
 }
 nav ul {
@@ -359,4 +364,52 @@ section {
 
 #eventLink:hover {
     background: #008b8b;
+}
+
+/* 🍔 Bouton Menu Hamburger (Mobile) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* 📱 Responsive pour mobiles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none; /* Caché par défaut */
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0 0 10px #00f;
+    }
+
+    .nav-links.show {
+        display: flex; /* Affiche le menu en mode mobile */
+    }
+
+    .nav-links li {
+        padding: 15px 0;
+    }
+    #logo img{
+        width: 30px;
+        position: fixed;
+        bottom: 10px;
+        transform: translateX(-50%);
+        padding: 10px 20px;
+    }
+    .social ul {
+        display: inline;
+    }    
 }

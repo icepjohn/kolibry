@@ -157,4 +157,6 @@ function closeLightbox() {
     window.closeLightbox = closeLightbox;
     window.changeImage = changeImage;
 });
-
+function toggleMenu() {
+    document.querySelector(".nav-links").classList.toggle("show");
+}
