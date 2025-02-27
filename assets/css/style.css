@@ -57,8 +57,8 @@ header h1 {
     top: 0;
     left: 0;
     width: 100%; /* Prend toute la largeur */
-    height: 30vh; /* Prend la moitié de la hauteur de l’écran */
-    background: rgba(128, 128, 128, 0.6); /* Gris avec 20% d'opacité */
+    height: 20vh; /* Prend la moitié de la hauteur de l’écran */
+    background: rgba(105, 104, 104, 0.3); /* Gris avec 20% d'opacité */
     z-index: 0; /* S’assure qu’il passe au-dessus du fond */
 }
 .newsletter {
