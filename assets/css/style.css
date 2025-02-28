@@ -441,8 +441,8 @@ section {
     }
     .nav-links {
         position: fixed;
-        left: -100%; /* Cache le menu hors de l'écran */
-        width: 70%;
+        left: -110%; /* Cache le menu hors de l'écran */
+        width: 100%;
         height: 100%;
         backdrop-filter: blur(15px); /* Effet de flou */
         box-shadow: 0 0 20px rgba(0, 200, 255, 0.8);
