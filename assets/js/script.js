@@ -1,91 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
-    let titles = document.querySelectorAll(".animated-title");
-
-    titles.forEach((title) => {
-        title.style.opacity = "0";
-        setTimeout(() => {
-            title.style.opacity = "1";
-            title.style.transition = "opacity 1s ease-in-out";
-        }, 500);
-    });
-});
-// Ouvrir la lightbox
-function openLightbox(img) {
-    document.getElementById("lightbox").style.display = "flex";
-    document.getElementById("lightbox-img").src = img.src;
-}
-
-// Fermer la lightbox
-function closeLightbox() {
-    document.getElementById("lightbox").style.display = "none";
-}
-let currentIndex = 0;
-let images = document.querySelectorAll(".gallery img");
-
-// Ouvrir la lightbox avec une image spécifique
-function openLightbox(img) {
-    let lightbox = document.getElementById("lightbox");
-    let lightboxImg = document.getElementById("lightbox-img");
-
-    // Trouver l'index de l'image actuelle
-    currentIndex = Array.from(images).indexOf(img);
-
-    // Afficher l'image sélectionnée
-    lightboxImg.src = img.src;
-    lightbox.style.display = "flex";
-}
-
-// Fermer la lightbox
-function closeLightbox() {
-    document.getElementById("lightbox").style.display = "none";
-}
-
-// Changer d’image avec les flèches
-function changeImage(direction, event) {
-    if (event) event.stopPropagation(); // Empêche la fermeture de la lightbox
-
-    // Met à jour l'index en vérifiant les limites
-    currentIndex = (currentIndex + direction + images.length) % images.length;
-
-    // Mettre à jour l’image affichée
-    document.getElementById("lightbox-img").src = images[currentIndex].src;
-}
-function openEvent(eventCard) {
-    // Récupère les données de la carte
-    let title = eventCard.getAttribute("data-title");
-    let imgSrc = eventCard.getAttribute("data-img");
-    let description = eventCard.getAttribute("data-description");
-    let link = eventCard.getAttribute("data-link");
-
-    // Met à jour la modale avec les infos
-    document.getElementById("eventTitle").textContent = title;
-    document.getElementById("eventImg").src = imgSrc;
-    document.getElementById("eventDescription").textContent = description;
-    document.getElementById("eventLink").href = link;
-
-    // Affiche la modale
-    document.getElementById("eventModal").style.display = "flex";
-}
-
-function closeEvent() {
-    document.getElementById("eventModal").style.display = "none";
-}
-function openEventModal(title, linkUrl) {
-    document.getElementById("eventTitle").textContent = title;
-
-    let eventLink = document.getElementById("eventLink");
-
-    if (linkUrl) {
-        eventLink.href = linkUrl;  // Met le lien correct
-        eventLink.classList.remove("disabled"); // Active le bouton
-    } else {
-        eventLink.href = "#";  // Désactive le lien si non fourni
-        eventLink.classList.add("disabled"); // Désactive visuellement
-    }
-
-    document.getElementById("eventModal").style.display = "flex"; 
-}
-// pour les images de la galerie
+// chargement des images
 document.addEventListener("DOMContentLoaded", function () {
     function generateImageList(start, end, prefix = "", suffix = ".jpg") {
         return Array.from({ length: end - start + 1 }, (_, i) => `${prefix}${start + i}${suffix}`);
@@ -131,11 +44,6 @@ function openLightbox(galleryIndex, imageIndex) {
     lightboxImg.src = imageFolder + galleries[currentGalleryIndex].images[currentIndex];
 }
 
-// ❌ Ferme la lightbox
-function closeLightbox() {
-    document.getElementById("lightbox").style.display = "none";
-}
-
 // ⏭️ Navigue entre les images
     function changeImage(direction, event) {
         event.stopPropagation();
@@ -157,6 +65,76 @@ function closeLightbox() {
     window.closeLightbox = closeLightbox;
     window.changeImage = changeImage;
 });
+// ❌ Ferme la lightbox
+function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+}
+function closeEvent() {
+    document.getElementById("eventModal").style.display = "none";
+}
+function closeEventDj() {
+    document.getElementById("eventModalDj").style.display = "none";
+}
+// Changer d’image avec les flèches
+function changeImage(direction, event) {
+    if (event) event.stopPropagation(); // Empêche la fermeture de la lightbox
+
+    // Met à jour l'index en vérifiant les limites
+    currentIndex = (currentIndex + direction + images.length) % images.length;
+
+    // Mettre à jour l’image affichée
+    document.getElementById("lightbox-img").src = images[currentIndex].src;
+}
+function openEventDJ(eventCard) {
+    // Récupère les données de la carte
+    let title = eventCard.getAttribute("data-title");
+    let imgSrc = eventCard.getAttribute("data-img");
+    let description = eventCard.getAttribute("data-description");
+
+    // Met à jour la modale avec les infos
+    document.getElementById("eventTitle").textContent = title;
+    document.getElementById("eventImg").src = imgSrc;
+    document.getElementById("eventDescription").textContent = description;
+
+    // Affiche la modale
+    document.getElementById("eventModalDj").style.display = "flex";
+}
+function openEventModalDj(title) {
+    document.getElementById("eventTitle").textContent = title;
+
+
+    document.getElementById("eventModalDj").style.display = "flex"; 
+}
+function openEvent(eventCard) {
+    // Récupère les données de la carte
+    let title = eventCard.getAttribute("data-title");
+    let imgSrc = eventCard.getAttribute("data-img");
+    let description = eventCard.getAttribute("data-description");
+    let link = eventCard.getAttribute("data-link");
+
+    // Met à jour la modale avec les infos
+    document.getElementById("eventTitle").textContent = title;
+    document.getElementById("eventImg").src = imgSrc;
+    document.getElementById("eventDescription").textContent = description;
+    document.getElementById("eventLink").href = link;
+
+    // Affiche la modale
+    document.getElementById("eventModal").style.display = "flex";
+}
+function openEventModal(title, linkUrl) {
+    document.getElementById("eventTitle").textContent = title;
+
+    if (linkUrl) {
+        eventLink.href = linkUrl;  // Met le lien correct
+        eventLink.classList.remove("disabled"); // Active le bouton
+    } else {
+        eventLink.href = "#";  // Désactive le lien si non fourni
+        eventLink.classList.add("disabled"); // Désactive visuellement
+    }
+
+    document.getElementById("eventModal").style.display = "flex"; 
+}
+
 function toggleMenu() {
     document.querySelector(".nav-links").classList.toggle("show");
 }

@@ -30,11 +30,38 @@
             </nav>
         </div>
     </header>
-    <main
-        <section class="bio-content">
-            <p>Texte sur le DJ, son parcours, son style musical...</p>
+    <main></main>
+        <section class="glitch">
+            <p>Biographie de l'équipes</p>
         </section>
     </main>
+
+    <!-- Cartes dj-->
+    <div class="eventsdj-container">
+        <div class="eventsdj-card" onclick="openEventDJ(this), openEventModalDj('JOHN SPARKS')" 
+            data-title="JOHN SPARKS" 
+            data-img="assets/images/event20220611.jpg" 
+            data-description="Bio de John Sparks............................................" 
+            data-link="">
+            <img src="assets/images/event20220611.jpg" alt="JOHN SPARKS">
+            <h2>JOHN SPARKS</h2>
+            <p>Bio</p>
+        </div>
+    <div>
+
+    <!-- Fenêtre modale pour afficher les détails -->
+    <div onclick="closeEventDj()">
+        <div id="eventModalDj" class="modalDj">
+            <div class="modalDj-content">
+                <span class="close">&times;</span>
+                <h2 id="eventTitle"></h2>
+                <img id="eventImg" src="" alt="Visuel de l'événement">
+                <p id="eventDescription"></p>
+            </div>
+        </div>
+    <div>    
+
+    
     <script src="assets/js/script.js"></script>
 </body>
 </html>
