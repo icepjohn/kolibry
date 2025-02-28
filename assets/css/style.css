@@ -275,21 +275,20 @@ section {
     text-align: center;
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
-    width: 300px;
+    width: 250px;
 }
 .eventsdj-card img {
     width: 100%;
-    height: 200px;
+    height: 150px;
     object-fit: cover;
     border-radius: 5px;
-    margin-bottom: 100px;
+    margin-bottom: 30px;
 }
 
 .eventsdj-card:hover {
     transform: scale(1.05);
     box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.8);
 }
-
 
 /* Style des cartes événements */
 .events-container {
@@ -422,7 +421,7 @@ section {
     background: none;
     border: none;
     font-size: 2rem;
-    color: white;
+    color: black;
     cursor: pointer;
 }
 
@@ -435,40 +434,78 @@ section {
     padding: 0px;
     position: absolute;
     right: 49px;
-    top: 594%;/* Caché par défaut */
+    top: 500%;/* Caché par défaut */
     }
     .menu-toggle {
         display: block;
     }
-
     .nav-links {
-        display: none; /* Caché par défaut */
+        position: fixed;
+        left: -100%; /* Cache le menu hors de l'écran */
+        width: 70%;
+        height: 100%;
+        backdrop-filter: blur(15px); /* Effet de flou */
+        box-shadow: 0 0 20px rgba(0, 200, 255, 0.8);
+        display: flex;
         flex-direction: column;
-        background-color: rgba(0, 0, 0, 0.9);
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        box-shadow: 0 0 10px #00f;
-    }
-
-    .nav-links.show {
-        display: flex; /* Affiche le menu en mode mobile */
-    }
-
-    .nav-links li {
-        padding: 15px 0;
+        align-items: baseline;
+        justify-content: normal;
+        gap: 20px;
+        transition: left 0.4s ease-in-out;
     }
     
+    /* Affichage du menu avec animation */
+    .nav-links.show {
+        left: 0;
+    }
+    
+    /* Style des liens */
+    .nav-links li {
+        list-style: none;
+    }
+    
+    .nav-links a {
+        text-decoration: none;
+        color: #33485D;
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: color 0.3s, text-shadow 0.3s;
+    }
+    
+    .nav-links a:hover {
+        color: #fff;
+        text-shadow: 0 0 10px #00d9ff, 0 0 20px #33485D;;
+    }
     #logo img{
         width: 30px;
         position: fixed;
-        bottom: 10px;
+        bottom: -10px;
         transform: translateX(-50%);
         padding: 10px 20px;
     }
     .social ul {
         display: inline;
-    }    
+    }
+    /* Icône burger */
+    .burger {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 40px;
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    .burger div {
+        width: 100%;
+        height: 4px;
+        background: #33485D;
+        transition: all 0.4s ease-in-out;
+        box-shadow: 0 0 10px #33485D;
+    }
 }
