@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LA KOLIBRY</title>
     <link rel="stylesheet" href="assets/css/style.css">
-</head>
+</head>    
 <body>
+
     <header>
         <div class="overlay">
             <div class="header-top">
@@ -14,10 +15,11 @@
                     <img src="assets/images/profile-kolibri-original.png" alt="Logo Kolibry">
                     Accueil                    
                 </a>
-                <form class="newsletter" action="newsletter.php" method="post">
+                <form id="newsletter-form" class="newsletter">
                     <input type="email" name="email" id="email" placeholder="Newsletter" required>
                     <button type="submit">S'inscrire</button>
                 </form>
+                <p id="message" style="display:none;"></p>
             </div>
             <h1>LA KOLIBRY</h1>
             <nav>
