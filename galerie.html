@@ -13,6 +13,7 @@
             <div class="header-top">
                 <a href="index.html" id="logo">
                     <img src="assets/images/profile-kolibri-original.png" alt="Logo Kolibry">
+                    Accueil
                 </a>
                 <form class="newsletter" action="newsletter.php" method="post">
                     <input type="email" name="email" id="email" placeholder="Newsletter" required>
@@ -35,27 +36,36 @@
         </div>
     </header>
     <main>
-    <section class="hero">
-        <h2 class="glitch">La Kolibry - Easter édition 2023/04/09  </h2>
-    </section>
-    <section class="gallery3" id="gallery3" changeImage>
-        <!-- Les images seront ajoutées dynamiquement -->
-    </section>
-    <section class="hero">
-        <h2 class="glitch">Garden Kolibry O'GREEN</h2>
-    </section>
-    <section class="gallery2" id="gallery2">
-        <!-- Les images seront ajoutées dynamiquement -->
-    </section>
-    <section class="hero">
-        <h2 class="glitch">La Kolibry - KICK OFF 09/04/2022</h2>
-    </section>
-    <section class="gallery" id="gallery" changeImage>
-        <!-- Les images seront ajoutées dynamiquement -->
-    </section>
-    </main>
+            <div class="cardPhoto" onclick="toggleImages(this)">
+                <h2>La Kolibry - Easter édition 2023/04/09  </h2>
+                <div class="image-container">
+                    <section class="gallery3" id="gallery3" changeImage>
+                        <!-- Les images seront ajoutées dynamiquement -->
+                    </section>
+                </div>
+            </div>
 
-    <!-- Lightbox -->
+            <div class="cardPhoto" onclick="toggleImages(this)">
+                <h2>Garden Kolibry O'GREEN</h2>
+                <div class="image-container">
+                    <section class="gallery2" id="gallery2">
+                    <!-- Les images seront ajoutées dynamiquement -->
+                    </section>
+                </div>
+            </div>
+
+            <div class="cardPhoto" onclick="toggleImages(this)">
+                <h2>La Kolibry - KICK OFF 09/04/2022</h2>
+                <div class="image-container">
+                    <section class="gallery" id="gallery" changeImage>
+                    <!-- Les images seront ajoutées dynamiquement -->
+                    </section>
+                </div>
+            </div>
+
+
+    </main>
+     <!-- Lightbox -->
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
         <span class="close" onclick="closeLightbox()">&times;</span>
         <span class="prev" onclick="changeImage(-1, event)">&#10094;</span>

@@ -138,3 +138,13 @@ function openEventModal(title, linkUrl) {
 function toggleMenu() {
     document.querySelector(".nav-links").classList.toggle("show");
 }
+function toggleImages(card) {
+    let container = card.querySelector('.image-container');
+    if (container.style.display === "none" || container.style.display === "") {
+        container.style.display = "block";
+        setTimeout(() => { container.style.opacity = "1"; }, 10);
+    } else {
+        container.style.opacity = "0";
+        setTimeout(() => { container.style.display = "none"; }, 500);
+    }
+}

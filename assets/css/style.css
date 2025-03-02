@@ -63,12 +63,10 @@ header h1 {
 }
 .newsletter {
     display: flex;
-    align-items: center;
     padding: 8px;
     position: absolute;
     right: 20px;
-    top: 550%;
-    transform: translateY(-50%);
+    top: 432%;
 }
 
 hr {
@@ -77,6 +75,7 @@ hr {
 }
 
 #logo {
+    display: grid;
     position: absolute; /* Positionne le logo indépendamment */
     left: 20px; /* Le met bien à gauche */
     top: 557%;
@@ -90,7 +89,6 @@ hr {
 
 /* Effet au survol (léger zoom + lumière bleue) */
 #logo img:hover {
-    transform: scale(1.1);
     filter: drop-shadow(0 0 10px #00ffff);
 }
 /* pour la partie icone reseau social*/
@@ -151,7 +149,6 @@ nav ul li a:hover {
 h1, h2 {
     text-align: center;
     text-transform: uppercase;
-    text-shadow: 0 0 10px #33485D;
 }
 
 /* Sections */
@@ -415,6 +412,41 @@ section {
     background: #008b8b;
 }
 
+.cardPhoto {
+    margin-top: 50PX;
+    margin-bottom: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background: #33485D;
+    border: 2px solid #0ff;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    cursor: pointer;
+    overflow: hidden;
+    color: white;
+}
+
+.cardPhoto:hover {
+    box-shadow: 0 0 15px #0ff;
+    transform: scale(1.05);
+}
+
+.image-container {
+    display: none;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.cardPhoto img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
 /* 🍔 Bouton Menu Hamburger (Mobile) */
 .menu-toggle {
     display: none;
@@ -429,12 +461,8 @@ section {
 /* 📱 Responsive pour mobiles */
 @media (max-width: 768px) {
     .newsletter {
-        display: flex;
     align-items: center;
-    padding: 0px;
-    position: absolute;
     right: 49px;
-    top: 500%;/* Caché par défaut */
     }
     .menu-toggle {
         display: block;
@@ -479,10 +507,8 @@ section {
     }
     #logo img{
         width: 30px;
-        position: fixed;
-        bottom: -10px;
+        margin-left: 20px;
         transform: translateX(-50%);
-        padding: 10px 20px;
     }
     .social ul {
         display: inline;
