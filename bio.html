@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LA KOLIBRY - Biographie</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
     <header>
@@ -14,10 +15,11 @@
                     <img src="assets/images/profile-kolibri-original.png" alt="Logo Kolibry">
                     Accueil
                 </a>
-                <form class="newsletter" action="newsletter.php" method="post">
+                <form id="newsletter-form" class="newsletter">
                     <input type="email" name="email" id="email" placeholder="Newsletter" required>
                     <button type="submit">S'inscrire</button>
                 </form>
+                <p id="message" style="display:none;"></p>
             </div>
             <h1>Biographie</h1>
             <nav>
@@ -34,20 +36,15 @@
             </nav>
         </div>
     </header>
-    <main></main>
-        <section>
-            <h2>Biographie de l'équipes</h2>
-        </section>
-    </main>
+    <section>
+         <h2>Biographie de l'équipes</h2>
 
     <!-- Cartes dj-->
     <div class="eventsdj-container">
-        <div class="eventsdj-card" onclick="openEventDJ(this), openEventModalDj('JOHN SPARKS')" 
+        <div class="eventsdj-card" onclick="openEventDJ(this), openEventModalDj('ARNOO ZARNOO')" 
             data-title="JOHN SPARKS" 
             data-img="assets/images/event20220611.jpg" 
-            data-description="Bio de John Sparks.......................................................................................................................
-            ............................................................................................................................................................................
-            ..................................................................................................................................">
+            data-description="Bio de John Sparks..........">
             <img src="assets/images/event20220611.jpg" alt="JOHN SPARKS">
             <h2>JOHN SPARKS</h2>
             <p>Bio</p>
@@ -56,16 +53,15 @@
         <div class="eventsdj-card" onclick="openEventDJ(this), openEventModalDj('JOHN SPARKS')" 
             data-title="JOHN SPARKS" 
             data-img="assets/images/event20220611.jpg" 
-            data-description="Bio de John Sparks.......................................................................................................................
-            ............................................................................................................................................................................
-            ..................................................................................................................................">
+            data-description="Bio de John Sparks................."
+            data-reseau="https://www.instagram.com/johnsparksdj">
             <img src="assets/images/event20220611.jpg" alt="JOHN SPARKS">
             <h2>JOHN SPARKS</h2>
             <p>Bio</p>
         </div>
 
-        
-    <div>
+    </section>
+
 
     <!-- Fenêtre modale pour afficher les détails -->
     <div onclick="closeEventDj()">
@@ -75,10 +71,24 @@
                 <h2 id="eventTitle"></h2>
                 <img id="eventImg" src="" alt="Visuel de l'événement">
                 <p id="eventDescription"></p>
+                <a id="eventSocial"></a>
             </div>
         </div>
     <div>    
 
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+            </div>
+            <div class="footer-links">
+                <a href="#"></a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+            </div>
+            <p class="footer-text">© 2025 Mon Site - Tous droits réservés.</p>
+        </div>
+    </footer>
     
     <script src="assets/js/script.js"></script>
 </body>

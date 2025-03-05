@@ -14,10 +14,11 @@
                     <img src="assets/images/profile-kolibri-original.png" alt="Logo Kolibry">
                     Accueil
                 </a>
-                <form class="newsletter" action="newsletter.php" method="post">
+                <form id="newsletter-form" class="newsletter">
                     <input type="email" name="email" id="email" placeholder="Newsletter" required>
                     <button type="submit">S'inscrire</button>
                 </form>
+                <p id="message" style="display:none;"></p>
             </div>
         <h1>Galeries</h1>
         <nav>
@@ -35,32 +36,30 @@
         </div>
     </header>
     <main>
-            <div class="cardPhoto" onclick="toggleImages(this)">
-                <h2>La Kolibry - Easter édition 2023/04/09  </h2>
-                <div class="image-container">
-                    <section class="gallery3" id="gallery3" changeImage>
-                        <!-- Les images seront ajoutées dynamiquement -->
-                    </section>
-                </div>
-            </div>
-
-            <div class="cardPhoto" onclick="toggleImages(this)">
-                <h2>Garden Kolibry O'GREEN</h2>
-                <div class="image-container">
-                    <section class="gallery2" id="gallery2">
+        <div class="cardPhoto" onclick="toggleImages(this)">
+            <h2>La Kolibry - Easter édition 2023/04/09  </h2>
+            <div class="image-container">
+                <section class="gallery3" id="gallery3" changeImage>
                     <!-- Les images seront ajoutées dynamiquement -->
-                    </section>
-                </div>
+                </section>
             </div>
-
-            <div class="cardPhoto" onclick="toggleImages(this)">
-                <h2>La Kolibry - KICK OFF 09/04/2022</h2>
-                <div class="image-container">
-                    <section class="gallery" id="gallery" changeImage>
-                    <!-- Les images seront ajoutées dynamiquement -->
-                    </section>
-                </div>
+        </div>
+        <div class="cardPhoto" onclick="toggleImages(this)">
+            <h2>Garden Kolibry O'GREEN</h2>
+            <div class="image-container">
+                <section class="gallery2" id="gallery2">
+                <!-- Les images seront ajoutées dynamiquement -->
+                </section>
             </div>
+        </div>
+        <div class="cardPhoto" onclick="toggleImages(this)">
+            <h2>La Kolibry - KICK OFF 09/04/2022</h2>
+            <div class="image-container">
+                <section class="gallery" id="gallery" changeImage>
+                <!-- Les images seront ajoutées dynamiquement -->
+                </section>
+            </div>
+        </div>
 
 
     </main>
@@ -71,6 +70,19 @@
         <img id="lightbox-img" class="lightbox-img">
         <span class="next" onclick="changeImage(1, event)">&#10095;</span>
     </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+            </div>
+            <div class="footer-links">
+                <a href="#"></a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+            </div>
+            <p class="footer-text">© 2025 Mon Site - Tous droits réservés.</p>
+        </div>
+    </footer>
     <script src="assets/js/script.js"></script>
 </body>
 </html>

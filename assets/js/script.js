@@ -164,8 +164,11 @@ document.addEventListener("DOMContentLoaded", function() {
             .then(response => response.json()) // 🔄 Convertit la réponse en JSON
             .then(data => {
                 let messageBox = document.getElementById("message");
+
                 messageBox.innerText = data.message;
                 messageBox.style.display = "block";
+                messageBox.style.opacity = "1";
+                messageBox.style.bottom = "20px"; // 📌 Affiche en bas avec animation
 
                 if (data.success) {
                     messageBox.style.color = "green";
@@ -173,6 +176,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 } else {
                     messageBox.style.color = "red";
                 }
+
+                // ⏳ Cache le message après 3 secondes
+                setTimeout(() => {
+                    messageBox.style.opacity = "0";
+                    messageBox.style.bottom = "-50px"; // Cache avec animation
+                }, 3000);
             })
             .catch(error => {
                 console.error("Erreur AJAX :", error);
@@ -182,3 +191,5 @@ document.addEventListener("DOMContentLoaded", function() {
         console.error("❌ Formulaire introuvable !");
     }
 });
+
+
