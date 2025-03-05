@@ -90,21 +90,47 @@ function openEventDJ(eventCard) {
     let title = eventCard.getAttribute("data-title");
     let imgSrc = eventCard.getAttribute("data-img");
     let description = eventCard.getAttribute("data-description");
+    let socialLinks = eventCard.getAttribute("data-reseau");
+    let titokLink = eventCard.getAttribute("data-tiktok");
+    let facebookLink = eventCard.getAttribute("data-facebook");
+    let soundcloudLink = eventCard.getAttribute("data-soundcloud");
+    let mixCloudLink = eventCard.getAttribute("data-mixcloud");
+
 
     // Met à jour la modale avec les infos
     document.getElementById("eventTitle").textContent = title;
     document.getElementById("eventImg").src = imgSrc;
     document.getElementById("eventDescription").textContent = description;
 
+    // Ajoute les liens des réseaux sociaux dans la modale
+    let socialHtml = '';
+    if (socialLinks) {
+        socialHtml += `<a href="${socialLinks}" target="_blank"><i class="fa-brands fa-instagram"></i></a>`;
+    }
+    if (titokLink) {
+        socialHtml += `<a href="${titokLink}" target="_blank"><i class="fa-brands fa-tiktok"></i></a>`;
+    }
+    if (facebookLink) {
+        socialHtml += `<a href="${facebookLink}" target="_blank"><i class="fa-brands fa-facebook"></i></a>`;
+    }
+    if (soundcloudLink) {
+        socialHtml += `<a href="${soundcloudLink}" target="_blank"><i class="fa-brands fa-soundcloud"></i></a>`;
+    }
+    if (mixCloudLink) {
+        socialHtml += `<a href="${mixCloudLink}" target="_blank"><i class="fa-brands fa-mixcloud"></i></a>`;
+    }
+    // Tu peux ajouter d'autres réseaux sociaux ici
+    document.getElementById("eventSocialLinks").innerHTML = socialHtml;
+
     // Affiche la modale
     document.getElementById("eventModalDj").style.display = "flex";
 }
+
 function openEventModalDj(title) {
     document.getElementById("eventTitle").textContent = title;
-
-
     document.getElementById("eventModalDj").style.display = "flex"; 
 }
+
 function openEvent(eventCard) {
     // Récupère les données de la carte
     let title = eventCard.getAttribute("data-title");

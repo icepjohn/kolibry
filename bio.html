@@ -40,25 +40,65 @@
          <h2>Biographie de l'équipes</h2>
 
     <!-- Cartes dj-->
-    <div class="eventsdj-container">
-        <div class="eventsdj-card" onclick="openEventDJ(this), openEventModalDj('ARNOO ZARNOO')" 
+<div class="events-container">
+    <div class="eventsdj-card" onclick="openEventDJ(this), openEventModalDj('JOHN SPARKS')" 
             data-title="JOHN SPARKS" 
             data-img="assets/images/event20220611.jpg" 
-            data-description="Bio de John Sparks..........">
-            <img src="assets/images/event20220611.jpg" alt="JOHN SPARKS">
-            <h2>JOHN SPARKS</h2>
-            <p>Bio</p>
+            data-description="John Sparks est un DJ, producteur et remixeur français de musique techno.
+            Son style de prédilection : une techno épurée, sombre et mélodique, avec des kicks puissants.
+            Ses morceaux sont soutenus et joués par des DJs renommés tels qu'Adam Beyer, Solee, Nick Warren, Thomas Schumacher, Eelke Kleijn, Christopher Kah, Oliver Schories, Dale Middleton, Soul Button, Djuma Soundsystem, Marc Poppcke, Namito et bien d'autres encore...
+            Véritable enfant de la techno, John Sparks a vécu les premiers pas de ce mouvement, une musique qui rythme sa vie."
+            data-reseau="https://www.instagram.com/johnsparksdj"
+            data-tiktok="https://www.tiktok.com/@johnsparks59"
+            data-facebook="https://www.facebook.com/officialjohnsparks"
+            data-soundcloud="https://soundcloud.com/john_sparks"
+            data-mixcloud="https://www.mixcloud.com/Johnsparks/">
+        <img src="assets/images/event20220611.jpg" alt="JOHN SPARKS">
+        <h2>JOHN SPARKS</h2>
+        <!-- Ajout des icônes des réseaux sociaux -->
+        <div class="social-links">
         </div>
+    </div>
 
-        <div class="eventsdj-card" onclick="openEventDJ(this), openEventModalDj('JOHN SPARKS')" 
-            data-title="JOHN SPARKS" 
-            data-img="assets/images/event20220611.jpg" 
-            data-description="Bio de John Sparks................."
-            data-reseau="https://www.instagram.com/johnsparksdj">
-            <img src="assets/images/event20220611.jpg" alt="JOHN SPARKS">
-            <h2>JOHN SPARKS</h2>
-            <p>Bio</p>
-        </div>
+    <div class="eventsdj-card" onclick="openEventDJ(this), openEventModalDj('ARNOO ZARNOO')" 
+        data-title="JOHN SPARKS" 
+        data-img="assets/images/event20220611.jpg" 
+        data-description="John Sparks est un DJ, producteur et remixeur français de musique techno.
+        Son style de prédilection : une techno épurée, sombre et mélodique, avec des kicks puissants.
+        Ses morceaux sont soutenus et joués par des DJs renommés tels qu'Adam Beyer, Solee, Nick Warren, Thomas Schumacher, Eelke Kleijn, Christopher Kah, Oliver Schories, Dale Middleton, Soul Button, Djuma Soundsystem, Marc Poppcke, Namito et bien d'autres encore...
+        Véritable enfant de la techno, John Sparks a vécu les premiers pas de ce mouvement, une musique qui rythme sa vie."
+        data-reseau="https://www.instagram.com/johnsparksdj"
+        data-tiktok="https://www.tiktok.com/@johnsparks59"
+        data-facebook="https://www.facebook.com/officialjohnsparks"
+        data-soundcloud="https://soundcloud.com/john_sparks"
+        data-mixcloud="https://www.mixcloud.com/Johnsparks/">
+        <img src="assets/images/event20220611.jpg" alt="ARNOO ZARNOO">
+        <h2>ARNOO ZARNOO</h2>
+        <!-- Ajout des icônes des réseaux sociaux -->
+        <div class="social-links">
+    </div>
+    </div>
+
+    <div class="eventsdj-card" onclick="openEventDJ(this), openEventModalDj('LUDO MTH')" 
+    data-title="LUDO MTH" 
+    data-img="assets/images/event20220611.jpg" 
+    data-description="John Sparks est un DJ, producteur et remixeur français de musique techno.
+    Son style de prédilection : une techno épurée, sombre et mélodique, avec des kicks puissants.
+    Ses morceaux sont soutenus et joués par des DJs renommés tels qu'Adam Beyer, Solee, Nick Warren, Thomas Schumacher, Eelke Kleijn, Christopher Kah, Oliver Schories, Dale Middleton, Soul Button, Djuma Soundsystem, Marc Poppcke, Namito et bien d'autres encore...
+    Véritable enfant de la techno, John Sparks a vécu les premiers pas de ce mouvement, une musique qui rythme sa vie."
+    data-reseau="https://www.instagram.com/johnsparksdj"
+    data-tiktok="https://www.tiktok.com/@johnsparks59"
+    data-facebook="https://www.facebook.com/officialjohnsparks"
+    data-soundcloud="https://soundcloud.com/john_sparks"
+    data-mixcloud="https://www.mixcloud.com/Johnsparks/">
+    <img src="assets/images/event20220611.jpg" alt="LUDO MTH">
+    <h2>LUDO MTH</h2>
+    <!-- Ajout des icônes des réseaux sociaux -->
+    <div class="social-links">
+    </div>
+    </div>
+</div>
+
 
     </section>
 
@@ -71,10 +111,10 @@
                 <h2 id="eventTitle"></h2>
                 <img id="eventImg" src="" alt="Visuel de l'événement">
                 <p id="eventDescription"></p>
-                <a id="eventSocial"></a>
+                <div id="eventSocialLinks"></div> <!-- Icônes réseaux sociaux dans la modale -->
             </div>
         </div>
-    <div>    
+    </div>   
 
     <footer>
         <div class="footer-container">
@@ -86,7 +126,7 @@
             <div class="footer-social">
                 <a href="#"><i class="fab fa-facebook"></i></a>
             </div>
-            <p class="footer-text">© 2025 Mon Site - Tous droits réservés.</p>
+            <h1 class="footer-text">© 2025 Mon Site - Tous droits réservés.</h1>
         </div>
     </footer>
     
