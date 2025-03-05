@@ -124,11 +124,11 @@ function openEvent(eventCard) {
 function openEventModal(title, linkUrl) {
     document.getElementById("eventTitle").textContent = title;
 
-    if (linkUrl) {
-        eventLink.href = linkUrl;  // Met le lien correct
+    if (linkUrl && linkUrl.trim() !== "" && linkUrl !== "#") {
+        eventLink.href = linkUrl;  
         eventLink.classList.remove("disabled"); // Active le bouton
     } else {
-        eventLink.href = "#";  // Désactive le lien si non fourni
+        eventLink.removeAttribute("href"); // Supprime complètement le lien
         eventLink.classList.add("disabled"); // Désactive visuellement
     }
 
@@ -148,3 +148,37 @@ function toggleImages(card) {
         setTimeout(() => { container.style.display = "none"; }, 500);
     }
 }
+document.addEventListener("DOMContentLoaded", function() {
+    let form = document.getElementById("newsletter-form");
+
+    if (form) { // Vérifie que le formulaire existe
+        form.addEventListener("submit", function(event) {
+            event.preventDefault(); // 🔥 Empêche la redirection
+
+            let formData = new FormData(form);
+
+            fetch("newsletter.php", { 
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.json()) // 🔄 Convertit la réponse en JSON
+            .then(data => {
+                let messageBox = document.getElementById("message");
+                messageBox.innerText = data.message;
+                messageBox.style.display = "block";
+
+                if (data.success) {
+                    messageBox.style.color = "green";
+                    form.reset(); // ✅ Vide le formulaire
+                } else {
+                    messageBox.style.color = "red";
+                }
+            })
+            .catch(error => {
+                console.error("Erreur AJAX :", error);
+            });
+        });
+    } else {
+        console.error("❌ Formulaire introuvable !");
+    }
+});
