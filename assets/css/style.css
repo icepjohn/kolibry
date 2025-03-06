@@ -13,7 +13,7 @@ main {
 }
 /* En-tête */
 header {
-    background: url("../images/COUV FACEBOOK KOLIBRY 2025 EASTER.jpg") no-repeat center center;
+    background: url("../images/event20250420.jpg") no-repeat center center;
     background-size: cover; /* Couvre tout le header */
     background-attachment: fixed; /* Active l'effet de parallaxe */
     background-position: center center; /* Centre l’image */
@@ -47,6 +47,8 @@ header::before {
     position: relative; /* Important pour le positionnement des éléments enfants */
 }
 header h1 {
+    display: contents;
+    font-size: 70px ;
     text-transform: uppercase;
     color:#ffffff; /* Fond semi-transparent */
     text-shadow:0 0 10px #00ffff;
@@ -58,7 +60,7 @@ header h1 {
     left: 0;
     width: 100%; /* Prend toute la largeur */
     height: 20vh; /* Prend la moitié de la hauteur de l’écran */
-    background: rgba(105, 104, 104, 0.3); /* Gris avec 20% d'opacité */
+    background: rgba(105, 104, 104, 0.5); /* Gris avec 20% d'opacité */
     z-index: 0; /* S’assure qu’il passe au-dessus du fond */
 }
 .newsletter {
@@ -516,8 +518,7 @@ footer {
 
 .footer-text {
     font-size: 14px;
-    margin-top: 15px;
-    opacity: 0.8;
+    margin-top: 5px;
 }
 
 #message {
@@ -589,6 +590,9 @@ footer {
 
 /* 📱 Responsive pour mobiles */
 @media (max-width: 768px) {
+    header h1 {
+        font-size: 30px;
+    }
     .newsletter {
     align-items: center;
     right: 49px;
