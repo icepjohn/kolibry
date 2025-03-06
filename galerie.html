@@ -9,6 +9,11 @@
 </head>
 <body>
     <header>
+        <div class="video-background">
+            <video autoplay muted loop id="background-video">
+                <source src="assets/images/Teaser EASTER-1.mp4" type="video/mp4">
+            </video>
+        </div>
         <div class="overlay">
             <div class="header-top">
                 <a href="index.html" id="logo">
@@ -16,7 +21,7 @@
                     Accueil
                 </a>
                 <form id="newsletter-form" class="newsletter">
-                    <input type="email" name="email" id="email" placeholder="Newsletter" required>
+                    <input type="email" name="email" id="email" placeholder="Newsletter" required autocomplete="email">
                     <button type="submit">S'inscrire</button>
                 </form>
                 <p id="message" style="display:none;"></p>
