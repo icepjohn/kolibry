@@ -9,7 +9,19 @@ body {
     padding: 0;
 }
 main {
-    font-family: "Jaapokki", sans-serif; 
+    font-family: "Jaapokki", sans-serif;
+    position: relative;
+}
+main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("A3 AMOR EDITION 2025.jpg") center/cover no-repeat;
+    opacity: 0.5; /* Régle l'opacité de l'image */
+    z-index: -1; /* Place l'image derrière le contenu */
 }
 /* En-tête */
 header {
@@ -75,7 +87,7 @@ header h1 {
     width: 100%; /* Prend toute la largeur */
     height: 20vh; /* Prend la moitié de la hauteur de l’écran */
     background: rgba(105, 104, 104, 0.5); /* Gris avec 20% d'opacité */
-    z-index: 0; /* S’assure qu’il passe au-dessus du fond */
+    z-index: 1; /* S’assure qu’il passe au-dessus du fond */
 }
 .newsletter {
     display: flex;
@@ -627,7 +639,7 @@ footer {
         left: -110%; /* Cache le menu hors de l'écran */
         width: 100%;
         height: 100%;
-        backdrop-filter: blur(15px); /* Effet de flou */
+        backdrop-filter: blur(30px); /* Effet de flou */
         box-shadow: 0 0 20px rgba(0, 200, 255, 0.8);
         display: flex;
         flex-direction: column;
@@ -648,6 +660,7 @@ footer {
     }
     
     .nav-links a {
+        text-shadow: 0 0 10px #00ffff;
         text-decoration: none;
         color: #33485D;
         font-size: 20px;
