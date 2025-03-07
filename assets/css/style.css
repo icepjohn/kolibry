@@ -85,6 +85,13 @@ header h1 {
     top: 432%;
 }
 
+.highlight {
+    display: block;
+    background-color: #33485D; /* Bleu avec 50% d'opacité */
+    padding: 5px 10px; /* Ajoute un espace autour du texte */
+    border-radius: 5px; /* Arrondi les bords */
+}
+
 hr {
     width: 40%;
     color: black;
