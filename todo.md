@@ -16,5 +16,6 @@ Onglet contact envoie mail -> plus tous les liens des reseaux
     ->Ajout d'un ongler nous écouter
 
     
-
+---------------SEO aller voir sur google keyword planner
+---------------
 

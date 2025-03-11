@@ -6,8 +6,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const galleries = [
         { id: "gallery", images: generateImageList(150, 241) },
-        { id: "gallery2", images: generateImageList(100242, 100297) },
-        { id: "gallery3", images: generateImageList(100000, 100041) }
+        { id: "gallery2", images: generateImageList(100242, 100318) },
+        { id: "gallery3", images: generateImageList(100000, 100041) },
+        { id: "gallery4", images: generateImageList(100041, 100140) },
+        { id: "gallery5", images: generateImageList(100142, 100240) },
+        { id: "gallery6", images: generateImageList(100319, 100418) },
+        { id: "gallery7", images: generateImageList(100419, 100518) },
+        { id: "gallery8", images: generateImageList(100519, 100618) },
+        { id: "gallery9", images: generateImageList(100619, 100717) }
     ];
     const imageFolder = "assets/images/soirées/gallery/"; // 📂 Dossier contenant les images
     let allImages = []; // Liste complète des images pour la navigation

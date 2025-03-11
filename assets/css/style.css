@@ -215,21 +215,21 @@ section {
 }
 
 /* Galerie d'images */
-.gallery, .gallery2, .gallery3{
+.gallery, .gallery2, .gallery3, .gallery4, .gallery5, .gallery6, .gallery7, .gallery8, .gallery9 {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     gap: 20px;
     padding: 20px;
 }
 
-.gallery img, .gallery2 img , .gallery3 img {
+.gallery img, .gallery2 img , .gallery3 img, .gallery4 img, .gallery5 img, .gallery6 img, .gallery7 img, .gallery8 img, .gallery9 img {
     width: 100%;
     height: auto;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
 }
 
-.gallery img:hover, .gallery2 img:hover, .gallery3 img:hover {
+.gallery img:hover, .gallery2 img:hover, .gallery3 img:hover, .gallery4 img:hover, .gallery5 img:hover, .gallery6 img:hover, .gallery7 img:hover, .gallery8 img:hover, .gallery9 img:hover {
     transform: scale(1.1);
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
 }
