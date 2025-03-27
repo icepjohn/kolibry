@@ -223,5 +223,19 @@ document.addEventListener("DOMContentLoaded", function() {
         console.error("❌ Formulaire introuvable !");
     }
 });
-
+window.addEventListener('scroll', function () {
+    const boxes = document.querySelectorAll('.eventsdj-card, .event-card');
+    const windowHeight = window.innerHeight;
+  
+    boxes.forEach(function (box) {
+      const boxTop = box.getBoundingClientRect().top;
+  
+      if (boxTop < windowHeight - 50) {
+        box.classList.add('visible');
+      } else {
+        box.classList.remove('visible');
+      }
+    });
+  });
+  
 

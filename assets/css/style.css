@@ -20,7 +20,7 @@ main::before {
     width: 100%;
     height: 100%;
     background: url("A3 AMOR EDITION 2025.jpg") center/cover no-repeat;
-    opacity: 0.5; /* Régle l'opacité de l'image */
+    opacity: 0.2; /* Régle l'opacité de l'image */
     z-index: -1; /* Place l'image derrière le contenu */
 }
 /* En-tête */
@@ -310,6 +310,13 @@ section {
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
     width: 250px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.eventsdj-card.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 .eventsdj-card img {
     width: 100%;
@@ -342,11 +349,16 @@ section {
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
     width: 250px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
-
+.event-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 .event-card img {
     width: 100%;
-    height: max(10rem, 30vh);
     object-fit: cover;
     border-radius: 5px;
     margin-bottom: 10px;
